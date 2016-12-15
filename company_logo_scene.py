@@ -17,7 +17,7 @@ class CompanyLogoScene(Scene):
         # create timer, so that after 2 seconds move to next scene
         self.start_time = time.time()
         
-        # add MT blue background color
+        # add white background color
         self.background = SpriteNode(position = self.size / 2, 
                                      color = 'white', 
                                      parent = self, 
@@ -30,7 +30,7 @@ class CompanyLogoScene(Scene):
     def update(self):
         # this method is called, hopefully, 60 times a second
         
-        # after 2 seconds, move to main menu scene
+        # after 2 seconds, move to game logo scene
         if not self.presented_scene and time.time() - self.start_time > 2:
             self.present_modal_scene(GameLogoScene())
     

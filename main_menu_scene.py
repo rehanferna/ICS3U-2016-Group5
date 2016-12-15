@@ -11,13 +11,23 @@ import ui
 class MainMenuScene(Scene):
     def setup(self):
         # this method is called, when user moves to this scene
+        self.title_position = Vector2()
         
         # add MT blue background color
-        self.background = SpriteNode(position = self.size / 2, 
-                                     color = 'white', 
-                                     parent = self, 
-                                     size = self.size)
-    
+        self.background = SpriteNode('./assets/sprites/snow.JPG',
+                                       parent = self,
+                                       position = self.size/2,
+                                       scale = 1.65)
+        # title
+        title_position = Vector2()
+        title_position.x = 384
+        title_position.y = 850
+        self.title = LabelNode(text = 'Hockey Shootout',
+                                      font=('Futura', 120),
+                                      color = '#2bacff',
+                                      parent = self,
+                                      scale = 0.75,
+                                      position = title_position)
     def update(self):
         # this method is called, hopefully, 60 times a second
         pass
