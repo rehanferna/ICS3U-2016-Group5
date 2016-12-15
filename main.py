@@ -1,5 +1,5 @@
-# Created by: Mr. Coxall
-# Created on: Sep 2016
+# Created by: Paul and Rehan
+# Created on: Dec 2016
 # Created for: ICS3U
 # This program is the first file in a multi-scene game template
 #    This template is meant to be used with the Xcode template,
@@ -20,12 +20,13 @@
 from scene import *
 import ui
 
-from splash_scene import *
+from company_logo_scene import *
+from game_logo_scene import *
 
 
 #  ..use when deploying app for Xcode and the App Store
 main_view = ui.View()
 scene_view = SceneView(frame = main_view.bounds, flex = 'WH')
 main_view.add_subview(scene_view)
-scene_view.scene = SplashScene()
+scene_view.scene = CompanyLogoScene()
 main_view.present(hide_title_bar = True, animated = False)
